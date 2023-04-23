@@ -5,7 +5,7 @@ const Card =({props})=>{
     const {symbol, name, id} = props;
     return (
       <div className="card-container">
-        <Link to={'/'+id}>
+        <Link to={'/'+id} style={{textDecoration: 'none'}}>
           <div className="card-symbol">
             {symbol.toUpperCase()}
           </div>

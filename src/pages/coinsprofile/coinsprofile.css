@@ -1,0 +1,44 @@
+
+.container-profile  {
+    display: block;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.img {
+    float: left;
+    margin-right: 12px;
+}
+.img img {
+    display: block;       
+}
+.symbol_container {
+    text-align: left;
+}
+.symbol{
+    color: #DF38DF;
+    font-size: 22px;
+    font-weight: bold;
+}
+.name{
+    color: #FFF;
+    font-weight: bold;
+    font-size: 15px;
+}
+.container-price {
+    color: #FFF;
+    text-align: left;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.container-description{
+    color: #858585;
+    margin: 0 auto;
+    width: 80%;
+    text-align: justify;
+    margin-bottom: 20px;
+}

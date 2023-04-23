@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import "./coinsprofile.css"
 import axios from 'axios';
 import {useParams} from "react-router-dom";
+import Loader from '../../components/Loader';
 
 const CoinsProfile =()=>{
       const {id} = useParams();
@@ -26,34 +27,34 @@ const CoinsProfile =()=>{
 
 
       return (
-            <div className="containerprofile">
-                <div className="container-description">
-                  <div className="img">
-                        <img alt={info?.symbol} src={info?.image?.small}/>
-                  </div>
-                  <div className="symbol">
-                        {info?.symbol}
-                  </div>
-                  <div className="name">
-                        {info?.name}    
-                  </div>
+            <>
+            {loading ? <Loader /> : 
+            (<div className="containerprofile">
+                <div className="container-profile">
+                    <div className="img">
+                            <img alt={info?.symbol} src={info?.image?.small}/>
+                    </div>
+                    <div className="symbol_container">
+                            <p className='symbol'>{info?.symbol?.toUpperCase()}</p>
+                            <p className='name'>{info?.name}</p>
+                    </div>
                 </div>
                 <div className="container-price">
-                  <div className="price">
-                        {info?.market_data?.current_price?.usd}   
-                  </div>
-                  <div className="supply">
-                        {info?.market_data?.total_supply}   
-                  </div>
+                    <div className="price">
+                            PRICE:  {"$"+info?.market_data?.current_price?.usd}   
+                    </div>
+                    <div className="supply">
+                            SUPPLY: {info?.market_data?.total_supply.toLocaleString()}   
+                    </div>
                 </div>
                 <div className="container-description">
-                  <div className="description">
-                        {info?.description?.en} 
-                  </div>
+                    <div className="description">
+                            {info?.description?.en} 
+                    </div>
                 </div>
             </div>
-
-
+           )}
+           </>
       )
 }
 export default CoinsProfile;

@@ -5,7 +5,7 @@ const Navbar =()=>{
       const [isNavExpanded, setIsNavExpanded] = useState(false)
       return (
         <nav className="navigation">
-        <a href="/" className="brand-name">
+        <a href="/coins" className="brand-name">
           CryptoCoins
         </a>
         <button 
