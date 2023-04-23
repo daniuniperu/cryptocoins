@@ -1,16 +1,20 @@
 import './App.css';
-import { Routes, Route} from "react-router-dom";
-import Coins from "./routes/coins";
-import Navbar from './Navbar';
+import Coins from "./pages/coins";
+import CoinsProfile from "./pages/coinsprofile";
+import Navbar from './components/Navbar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <>
-      <Navbar />
-      <div className="container">
-      <Routes>
-        <Route path="/" element={<Coins />} />
-      </Routes>
-      </div>
+      <BrowserRouter>
+        <Navbar />
+        <div className="container">
+          <Routes>
+            <Route path="/coins" element={<Coins />} />
+            <Route path="/:id" element={<CoinsProfile /> } />
+          </Routes>
+        </div>
+      </BrowserRouter>
     </>
   );
 }

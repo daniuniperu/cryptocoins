@@ -1,0 +1,30 @@
+.titletext {
+    color: #646CFF;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.searchText {
+    width: 100%;
+    background-color: #242424;
+    border: 1px solid white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #FFF;
+    height: 25px;
+    padding-left: 10px;
+}
+
+.container-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.add-post-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
