@@ -52,7 +52,7 @@ const Coins =()=>{
                   </div>
                   {loading ? <Loader /> : 
                   <div className="container-card">
-                        { posts.slice(0, 120).map(post => (
+                        { posts.slice(0, 1200).map(post => (
                         <Card props={post} />
                         )) }   
                   </div>
